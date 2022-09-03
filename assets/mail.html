@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>  
+	<script type="text/javascript">
+		function sendEmail() {
+			Email.send({
+				Host: "smtp.gmail.com",
+				Username : "noobmaster56372@gmail.com",
+				Password : ".kousthub10",
+				To : 'kousthubpc@gmail.com',
+				From : "noobmaster56372@gmail.com",
+				Subject : "sub",
+				Body : "body",
+			})
+			.then(function(message){
+				alert("mail sent successfully")
+			});
+		}
+	</script>
+</head>
+<body>  
+	<form method="post">
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+    </html>
+        <!-- // smtp.elasticemail.com
+        // noobmaster56372@gmail.com
+        // 28a3cd77-1a2b-4a97-9c8c-811dfe68c1e6 -->
+</body>
+
