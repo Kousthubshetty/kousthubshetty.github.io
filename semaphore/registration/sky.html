@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sky</title>
+    <style>
+      :root {
+        --clouds: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100%' width='100%'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0%25' style='stop-color:rgb(255,255,255);stop-opacity:0' /%3E%3Cstop offset='70%25' style='stop-color:rgb(255,255,255);stop-opacity:0.8' /%3E%3Cstop offset='100%25' style='stop-color:rgb(255,255,255);stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cfilter id='cloud'%3E%3CfeTurbulence baseFrequency='0.006' numOctaves='6' seed='5' /%3E%3CfeColorMatrix values='1.2 0.8 1.4 -0.5 -0.9 1.4 -0.4 1.3 -0.4 1.3 1.5 1.2 0.1 1.9 1 1.9 0.6 -0.7 1.1 1.6' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23cloud)' /%3E%3Crect width='100%25' height='100%25' fill='url(%23grad1)' /%3E%3C/svg%3E")
+          center center no-repeat;
+      }
+      body {
+        margin: 0 auto;
+      }
+      .skyHolder {
+        overflow: hidden;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+      }
+      .sky {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100%;
+        width: 1000vw;
+        background: var(--clouds);
+        animation: skyMotion 400s alternate infinite;
+      }
+      /* .sky:after{
+	content:'';
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%, -50%);
+	height:100%;
+	width:100%;
+	background-image:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,1));
+} */
+      @keyframes skyMotion {
+        from {
+          left: 0%;
+        }
+        to {
+          left: -900vw;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="skyHolder">
+      <div class="sky"></div>
+    </div>
+  </body>
+</html>
