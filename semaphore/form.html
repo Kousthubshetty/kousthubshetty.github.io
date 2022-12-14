@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>form</title>
+  </head>
+  <body>
+    <center>
+      <form action="" method="post">
+        <input type="text" name="name" id="name" /><br />
+        <input type="text" name="pass" id="pass" /><br />
+        <input type="text" name="email" id="mail" onclick="hide()" /><br />
+        <input type="submit" name="submit" id="submit" onmouseover="hide()" />
+      </form>
+    </center>
+    <script>
+      var pos = 0;
+      function hide() {
+        name = document.getElementById("name").value;
+        pass = document.getElementById("pass").value;
+        mail = document.getElementById("mail").value;
+
+        if (name == '' || pass == '' || mail == '')
+          if (pos == 0 || pos == -1) {
+            anime({
+              targets: "#submit",
+              translateX: 250,
+            });
+            pos = 1;
+          } else if ((pos = 1)) {
+            anime({
+              targets: "#submit",
+              translateX: -250,
+            });
+            pos = -1;
+          }
+      }
+    </script>
+  </body>
+</html>
