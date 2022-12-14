@@ -37,7 +37,7 @@
       }
     </style>
   </head>
-  <body>
+  <body onload="this.style.visibility = 'visible';">
     <ul id="menu">
       <center>
         <li data-menuanchor="firstPage">
@@ -64,11 +64,97 @@
             height: 100%;
             background-size: 100% 100%;
             background-color: black; /* in case the video doesn't fit the whole page*/
-            background-image: /* our video */ ;
             background-position: center center;
             background-size: contain;
             object-fit: cover; /*cover video background */
             z-index: 3;
+          }
+          #myFrameR {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+            z-index: 3;
+          }
+          #myFrameE {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+            z-index: 3;
+          }
+          #myFrameC {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: black; /* in case the video doesn't fit the whole page*/
+            background-position: center center;
+            background-size: contain;
+            object-fit: cover; /*cover video background */
+            z-index: 3;
+          }
+
+          .semaphore {
+            /* background: 50% 100%/50% 50% no-repeat
+              radial-gradient(ellipse at bottom, #fff, transparent, transparent); */
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            /* font-size: 10vw; */
+            /* font-family: "Source Sans Pro", sans-serif; */
+            -webkit-animation: reveal 3000ms ease-in-out forwards 200ms,
+              glow 2500ms linear infinite 2000ms;
+            animation: reveal 3000ms ease-in-out forwards 200ms,
+              glow 2500ms linear infinite 2000ms;
+          }
+          /* @-webkit-keyframes reveal {
+            80% {
+              letter-spacing: 8px;
+            }
+            100% {
+              background-size: 300% 300%;
+            }
+          }
+          @keyframes reveal {
+            80% {
+              letter-spacing: 8px;
+            }
+            100% {
+              background-size: 300% 300%;
+            }
+          } */
+          @-webkit-keyframes glow {
+            40% {
+              text-shadow: 0 0 8px #fff;
+            }
+          }
+          @keyframes glow {
+            40% {
+              text-shadow: 0 0 8px #fff;
+            }
+          }
+
+          @font-face {
+            font-family: "digital";
+            src: url("./assets/DS-DIGIT.TTF");
           }
         </style>
         <!-- <div class="slide" id="slide1.1"> -->
@@ -81,13 +167,42 @@
           frameborder="0"
           width="100%"
           height="100%"
+          onload="this.style.visibility = 'visible';"
         ></iframe>
+
+        <link rel="stylesheet" href="./assets/typewriter.css" />
+        <div
+          class="typewriter"
+          style="
+            z-index: 3;
+            position: absolute;
+            right: 0;
+            padding-right: 150px;
+            top: 30%;
+          "
+        >
+          <div class="semaphore">
+            <p style="font-size: 100px; font-family: digital">Semaphore</p>
+          </div>
+          <p class="text">Winter is coming.</p>
+        </div>
+        <div
+          style="
+            z-index: 30;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+          "
+        ></div>
       </div>
       <style>
-        #section1 {
-          background-image: url(./css-3d-card-src/background.jpg);
-          z-index: 3;
-        }
+        /* #section1 { */
+          /* background-image: url(./css-3d-card-src/background.jpg);
+          z-index: 3; */
+        /* } */
         .container {
           width: 100vw;
           height: 100vh;
@@ -102,13 +217,116 @@
       <link rel="stylesheet" href="./src/styles.css" />
 
       <div class="section" id="section1">
+        <iframe
+          src="./rain/rain.html"
+          id="myFrame"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          style="z-index: 3"
+          onload="this.style.visibility = 'visible';"
+        ></iframe>
         <div class="slide" style="overflow: hidden">
           <div class="container">
             <div class="card">
-              <div class="card-image"></div>
+              <div
+                class="card-image"
+                style="background: url('./images/code.jpg')"
+              ></div>
               <div class="card-text">
                 <span class="date">4 days ago</span>
-                <h2>Post One</h2>
+                <h2>Coding</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
+                  temporibus omnis illum maxime quod deserunt eligendi dolor
+                </p>
+              </div>
+              <div class="card-stats">
+                <div class="stat">
+                  <div class="value">4<sup>m</sup></div>
+                  <div class="type">read</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">5123</div>
+                  <div class="type">views</div>
+                </div>
+                <div class="stat">
+                  <div class="value">32</div>
+                  <div class="type">comments</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="card-image card2"
+                style="background: url('./images/web.jpg')"
+              ></div>
+              <div class="card-text card2">
+                <span class="date">1 week ago</span>
+                <h2>Web Design</h2>
+                <p>
+                  Adipisicing elit. Ducimus, repudiandae corrupti amet
+                  temporibus omnis provident illum maxime quod. Lorem ipsum
+                  dolor
+                </p>
+              </div>
+              <div class="card-stats card2">
+                <div class="stat">
+                  <div class="value">7<sup>m</sup></div>
+                  <div class="type">read</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">7152</div>
+                  <div class="type">views</div>
+                </div>
+                <div class="stat">
+                  <div class="value">21</div>
+                  <div class="type">comments</div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div
+                class="card-image card3"
+                style="background: url('./images/man.jpg')"
+                )
+              ></div>
+              <div class="card-text card3">
+                <span class="date">3 week ago</span>
+                <h2>IT Manager</h2>
+                <p>
+                  Repudiandae corrupti amet temporibus omnis provident illum
+                  maxime. Ducimus, lorem ipsum dolor adipisicing elit
+                </p>
+              </div>
+              <div class="card-stats card3">
+                <div class="stat">
+                  <div class="value">5<sup>m</sup></div>
+                  <div class="type">read</div>
+                </div>
+                <div class="stat border">
+                  <div class="value">3021</div>
+                  <div class="type">views</div>
+                </div>
+                <div class="stat">
+                  <div class="value">15</div>
+                  <div class="type">comments</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="container">
+            <div class="card">
+              <div
+                class="card-image"
+                style="background: url('./images/coding.jpg')"
+              ></div>
+              <div class="card-text">
+                <span class="date">4 days ago</span>
+                <h2>Coding</h2>
                 <p>
                   Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
                   temporibus omnis illum maxime quod deserunt eligendi dolor
@@ -185,87 +403,10 @@
         <div class="slide">
           <div class="container">
             <div class="card">
-              <div class="card-image"></div>
-              <div class="card-text">
-                <span class="date">4 days ago</span>
-                <h2>Post One</h2>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, Ducimus, repudiandae
-                  temporibus omnis illum maxime quod deserunt eligendi dolor
-                </p>
-              </div>
-              <div class="card-stats">
-                <div class="stat">
-                  <div class="value">4<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">5123</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">32</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image card2"></div>
-              <div class="card-text card2">
-                <span class="date">1 week ago</span>
-                <h2>Post Two</h2>
-                <p>
-                  Adipisicing elit. Ducimus, repudiandae corrupti amet
-                  temporibus omnis provident illum maxime quod. Lorem ipsum
-                  dolor
-                </p>
-              </div>
-              <div class="card-stats card2">
-                <div class="stat">
-                  <div class="value">7<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">7152</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">21</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-image card3"></div>
-              <div class="card-text card3">
-                <span class="date">3 week ago</span>
-                <h2>Post Three</h2>
-                <p>
-                  Repudiandae corrupti amet temporibus omnis provident illum
-                  maxime. Ducimus, lorem ipsum dolor adipisicing elit
-                </p>
-              </div>
-              <div class="card-stats card3">
-                <div class="stat">
-                  <div class="value">5<sup>m</sup></div>
-                  <div class="type">read</div>
-                </div>
-                <div class="stat border">
-                  <div class="value">3021</div>
-                  <div class="type">views</div>
-                </div>
-                <div class="stat">
-                  <div class="value">15</div>
-                  <div class="type">comments</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="container">
-            <div class="card">
-              <div class="card-image"></div>
+              <div
+                class="card-image"
+                style="background: url('./images/photo.png')"
+              ></div>
               <div class="card-text">
                 <span class="date">4 days ago</span>
                 <h2>Post One</h2>
@@ -355,8 +496,57 @@
           });
         </script>
       </div>
-      <div class="section" id="section2"><h1>Section 3</h1></div>
-      <div class="section" id="section3"><h1>Section 4</h1></div>
+      <div class="section" id="section2">
+        <iframe
+          src="./registration/sky1.html"
+          id="myFrameR"
+          frameborder="0"
+          width="100vh"
+          height="100vh"
+        ></iframe>
+
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+          "
+        >
+          <div style="height: 20%; width: 100%"></div>
+          <form action="">
+            <input type="text" />
+          </form>
+          <div class="cloud">
+            <input type="button" value="submit">
+            <img src="./images/cloud.png" alt="submit" style="width: 40%;">
+          </div>
+        </div>
+      </div>
+      <div class="section" id="section3">
+        <iframe
+          src="./rain/rain1.html"
+          id="myFrame"
+          frameborder="0"
+          width="100%"
+          height="100%"
+          onload="this.style.visibility = 'visible';"
+        ></iframe>
+        <div
+          style="
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+          "
+        >
+          <div style="height: 20%; width: 100%"></div>
+        </div>
+      </div>
     </div>
 
     <script type="text/javascript" src="./assets/examples.js"></script>

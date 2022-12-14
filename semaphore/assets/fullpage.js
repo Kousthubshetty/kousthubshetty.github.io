@@ -2977,7 +2977,7 @@
 
       if (getOptions().paddingTop) {
         css(sectionElem, {
-          'padding-top': getOptions().paddingTop
+          // 'padding-top': getOptions().paddingTop
         });
       }
 

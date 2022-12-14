@@ -33,7 +33,7 @@ html.fp-enabled,
     display: block;
 }
 .fp-slides {
-    z-index:1;
+    z-index:30;
     height: 100%;
     overflow: hidden;
     position: relative;
@@ -74,6 +74,8 @@ html.fp-enabled,
     width: 0;
     height: 0;
     border-style: solid;
+    z-index: 60;
+
 }
 .fp-arrow.fp-prev {
     border-width: 38.5px 34px 38.5px 0;
@@ -163,7 +165,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #fff;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -191,6 +193,7 @@ html.fp-enabled,
     opacity: 0;
     width: 0;
     cursor: pointer;
+    font-weight: bold;
 }
 #fp-nav ul li:hover .fp-tooltip,
 #fp-nav.fp-show-active a.active + .fp-tooltip {
