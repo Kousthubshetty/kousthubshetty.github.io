@@ -35,9 +35,25 @@
       .fp-controlArrow.fp-next {
         right: 50px;
       }
+      #hideAll {
+        position: fixed;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        background-color: white;
+        z-index: 99; /* Higher than anything else in the document */
+      }
     </style>
   </head>
-  <body onload="this.style.visibility = 'visible';">
+  <body>
+    <div style="display: none" id="hideAll">&nbsp;</div>
+    <script type="text/javascript">
+      document.getElementById("hideAll").style.display = "block";
+      window.onload = function () {
+        document.getElementById("hideAll").style.display = "none";
+      };
+    </script>
     <ul id="menu">
       <center>
         <li data-menuanchor="firstPage">
@@ -200,7 +216,7 @@
       </div>
       <style>
         /* #section1 { */
-          /* background-image: url(./css-3d-card-src/background.jpg);
+        /* background-image: url(./css-3d-card-src/background.jpg);
           z-index: 3; */
         /* } */
         .container {
@@ -520,8 +536,8 @@
             <input type="text" />
           </form>
           <div class="cloud">
-            <input type="button" value="submit">
-            <img src="./images/cloud.png" alt="submit" style="width: 40%;">
+            <input type="button" value="submit" />
+            <img src="./images/cloud.png" alt="submit" style="width: 40%" />
           </div>
         </div>
       </div>
